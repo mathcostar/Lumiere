@@ -49,7 +49,10 @@ begin
 
   try
     if (Trim(banco) = '') or (Trim(host) = '') then
-      ShowMessage('O nome do banco de dados e/ou o host n„o podem estar vazios.');
+      begin
+        ShowMessage('O nome do banco de dados e/ou o host n√£o podem estar vazios.');
+        Abort();
+      end;
 
     fdConexao.Connected := False;
     fdConexao.Params.Clear();
