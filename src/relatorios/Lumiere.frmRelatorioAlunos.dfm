@@ -1,0 +1,144 @@
+object frmRelatorioAlunos: TfrmRelatorioAlunos
+  Left = 0
+  Top = 0
+  Caption = 'Relat'#243'rios - Alunos'
+  ClientHeight = 284
+  ClientWidth = 780
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object RLReport1: TRLReport
+    Left = -8
+    Top = 0
+    Width = 794
+    Height = 1123
+    Borders.Sides = sdAll
+    DataSource = dmConexao.dsAlunos
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = []
+    object RLBand1: TRLBand
+      AlignWithMargins = True
+      Left = 39
+      Top = 39
+      Width = 716
+      Height = 107
+      BandType = btTitle
+      Borders.Sides = sdCustom
+      Borders.DrawLeft = False
+      Borders.DrawTop = False
+      Borders.DrawRight = False
+      Borders.DrawBottom = True
+      object rlblTitulo: TRLLabel
+        Left = 192
+        Top = 18
+        Width = 329
+        Height = 32
+        Caption = 'RELAT'#211'RIO DE ALUNOS'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -27
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+      end
+      object RLSystemInfo1: TRLSystemInfo
+        Left = 584
+        Top = 74
+        Width = 115
+        Height = 16
+        Info = itNow
+        Text = ''
+      end
+      object RLLabel1: TRLLabel
+        Left = 472
+        Top = 74
+        Width = 106
+        Height = 16
+        Caption = 'Data de emiss'#227'o:'
+      end
+    end
+    object RLDetailGrid1: TRLDetailGrid
+      AlignWithMargins = True
+      Left = 39
+      Top = 146
+      Width = 716
+      Height = 103
+      object RLDBText1: TRLDBText
+        Left = 40
+        Top = 49
+        Width = 43
+        Height = 18
+        DataField = 'nome'
+        DataSource = dmConexao.dsAlunos
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Text = ''
+      end
+      object RLDBText2: TRLDBText
+        Left = 457
+        Top = 49
+        Width = 118
+        Height = 18
+        DataField = 'nome_professor'
+        DataSource = dmConexao.dsAlunos
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Text = ''
+      end
+      object RLLabel3: TRLLabel
+        Left = 40
+        Top = 24
+        Width = 56
+        Height = 19
+        Caption = 'Aluno:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object RLLabel2: TRLLabel
+        Left = 457
+        Top = 24
+        Width = 188
+        Height = 19
+        Caption = 'Professor respons'#225'vel:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+    end
+    object RLBand2: TRLBand
+      AlignWithMargins = True
+      Left = 39
+      Top = 249
+      Width = 716
+      Height = 16
+      BandType = btFooter
+      Borders.Sides = sdCustom
+      Borders.DrawLeft = False
+      Borders.DrawTop = False
+      Borders.DrawRight = False
+      Borders.DrawBottom = True
+    end
+  end
+end
